@@ -35,6 +35,6 @@ export CQT_RUN_FILE="$BASE_DIR/differential_equations.sh"
 export QT_QPA_PLATFORM_PLUGIN_PATH="$BASE_DIR"/plugins/platforms:$QT_QPA_PLATFORM_PLUGIN_PATH
 
 
-
+chmod +x "$BASE_DIR/bin/differential_equations"
 "$BASE_DIR/bin/differential_equations" "$@" 
 
