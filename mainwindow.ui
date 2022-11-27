@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1814</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1614</width>
+    <height>670</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1814</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Дифференциальные уравнения</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>favicon.ico</normaloff>favicon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1614</width>
+     <height>670</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1814</width>
+     <height>700</height>
+    </size>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1814</width>
+      <height>700</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1814</width>
+      <height>700</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1814</width>
+      <height>700</height>
+     </size>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Вычисления</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>1031</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Уравнения</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>38</y>
+         <width>167</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Выберите уравнение</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="line_equ">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>672</x>
+         <y>34</y>
+         <width>184</width>
+         <height>28</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_equ">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>35</y>
+         <width>184</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>y'= -x-y+(y/x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y'= (1-y^2)/(2*x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y'= x^2-2y</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y'= e^(-sin(x))-y*cos(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y'= -((y^2-y)/(x+1))</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>y'= y/(-1-x)</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>40</y>
+         <width>156</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Введите уравнение</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="set_combo_equ">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>37</y>
+         <width>17</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="set_line_equ">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>40</y>
+         <width>17</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="calculate">
+       <property name="geometry">
+        <rect>
+         <x>877</x>
+         <y>33</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Расчитать</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>118</x>
+         <y>87</y>
+         <width>77</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Отрезок [</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="a">
+       <property name="geometry">
+        <rect>
+         <x>201</x>
+         <y>80</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <double>-100.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>100.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="b">
+       <property name="geometry">
+        <rect>
+         <x>306</x>
+         <y>79</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <double>-100.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>100.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>2.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>82</y>
+         <width>6</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>396</x>
+         <y>80</y>
+         <width>8</width>
+         <height>26</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>]</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="y0_text">
+       <property name="geometry">
+        <rect>
+         <x>422</x>
+         <y>84</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>y()=</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="y0">
+       <property name="geometry">
+        <rect>
+         <x>478</x>
+         <y>80</y>
+         <width>81</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <double>-100.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>100.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>2.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>580</x>
+         <y>84</y>
+         <width>87</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Sans Serif</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Точность</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="accuracy">
+       <property name="geometry">
+        <rect>
+         <x>671</x>
+         <y>80</y>
+         <width>111</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="decimals">
+        <number>5</number>
+       </property>
+       <property name="minimum">
+        <double>0.000010000000000</double>
+       </property>
+       <property name="maximum">
+        <double>100.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.000010000000000</double>
+       </property>
+       <property name="value">
+        <double>0.100000000000000</double>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="write_to_bd">
+       <property name="geometry">
+        <rect>
+         <x>868</x>
+         <y>80</y>
+         <width>128</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Записать в БД</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QTableWidget" name="euler_data">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>542</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>32</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+     <widget class="QTableWidget" name="runge_data">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>170</y>
+        <width>542</width>
+        <height>481</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>32</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>1140</x>
+        <y>0</y>
+        <width>661</width>
+        <height>651</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="graph_layout"/>
+     </widget>
+     <widget class="QPushButton" name="reset_graph">
+      <property name="geometry">
+       <rect>
+        <x>1730</x>
+        <y>0</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сбросить</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>БД</string>
+     </attribute>
+     <widget class="QTableWidget" name="euler_data_db">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>542</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>32</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>1130</x>
+        <y>0</y>
+        <width>681</width>
+        <height>671</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="graph_layout_db"/>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>100</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Sans Serif</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Выберите запись</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_equ_db">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>821</width>
+        <height>28</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="runge_data_db">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>60</y>
+        <width>542</width>
+        <height>581</height>
+       </rect>
+      </property>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>32</number>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+     </widget>
+     <widget class="QPushButton" name="clear_bd">
+      <property name="geometry">
+       <rect>
+        <x>990</x>
+        <y>10</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Очистить БД</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="reset_graph_db">
+      <property name="geometry">
+       <rect>
+        <x>1730</x>
+        <y>0</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сбросить</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Настройки БД</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>288</x>
+        <y>10</y>
+        <width>1152</width>
+        <height>288</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="title">
+       <string>Параметры подключения</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <widget class="QLineEdit" name="pg_bd">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>207</y>
+         <width>184</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>equation</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_11">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>57</y>
+         <width>44</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Порт</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>160</y>
+         <width>64</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Пароль</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pg_password">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>154</y>
+         <width>184</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::PasswordEchoOnEdit</enum>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pg_user">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>104</y>
+         <width>184</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>postgres</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="pg_ip">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>53</y>
+         <width>184</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>localhost</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>60</y>
+         <width>157</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ip-адрес сервера PostgreSQL</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_8">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>110</y>
+         <width>223</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Пользователь PostgreSQL</string>
+       </property>
+      </widget>
+      <widget class="QSpinBox" name="pg_port">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>50</y>
+         <width>92</width>
+         <height>37</height>
+        </rect>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>65535</number>
+       </property>
+       <property name="value">
+        <number>5432</number>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>270</x>
+         <y>210</y>
+         <width>108</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>База данных</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pg_connect">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>210</y>
+         <width>117</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Подключить</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="pgpass_enable">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>162</y>
+         <width>17</width>
+         <height>18</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pg_disconnect">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>210</y>
+         <width>117</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Отключить</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>110</y>
+         <width>39</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Статус:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="status_db">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>110</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Оффлайн</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>720</x>
+         <y>160</y>
+         <width>50</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Драйвер:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="db_driver">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>160</y>
+         <width>201</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="spinner">
+      <property name="geometry">
+       <rect>
+        <x>835</x>
+        <y>278</y>
+        <width>145</width>
+        <height>145</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
